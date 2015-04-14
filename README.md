@@ -119,7 +119,7 @@ The `/secure-place` will now redirect unauthenticated user to the `/login` path.
 
 ## Auth.authorize()
 
-> Middleware that stops unauthorized access. When an unauthenticated user tries to access a route defined after this middleware, a user is redirected to a login page or 401 is returned if login path is not set.
+> Middleware that stops unauthenticated access. When an unauthenticated user tries to access a route defined after this middleware, a user is redirected to a login page or 401 is returned if login path is not set.
 
 ## Request Object
 
