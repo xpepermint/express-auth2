@@ -98,6 +98,7 @@ module.exports = function() {
 Now configure the module, attach the handler to a route and require authentication.
 
 ```js
+var authSession = require('./auth/session');
 ...
 app.use(auth.init({ loginUrl:'/login' }));
 app.use(authSession());
