@@ -103,7 +103,7 @@ var authSession = require('./auth/session');
 app.use(auth.init({ loginUrl:'/login' }));
 app.use(authSession());
 ...
-app.get('/secure-place', auth.requireAuthentication(), function(req, res) {
+app.get('/secure-place', auth.authorize(), function(req, res) {
   ...
 });
 ```

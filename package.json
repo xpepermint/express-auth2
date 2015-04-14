@@ -1,6 +1,6 @@
 {
   "name": "express-auth2",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "User authentication middleware for ExpressJS.",
   "main": "index.js",
   "scripts": {
