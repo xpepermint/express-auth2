@@ -109,61 +109,61 @@ app.get('/secure-place', auth.requireAuthentication(), function(req, res) {
 
 The `/secure-place` will now redirect unauthenticated user to the `/login` path. A user will be redirected back to the `/secure-place` on successful login.
 
-## auth.init(options)
+## Auth.init(options)
 
 > Initialization middleware which adds methods for building authentications to request and response objects.
 
-### loginUrl :: String | Function(req)
+#### options.loginUrl :: String | Function(req)
 
 > Path to the login page. Not that you can pass a function in case of a dynamic path (e.g. when using route translations).
 
-## auth.authorize()
+## Auth.authorize()
 
 > Middleware that stops unauthorized access. When an unauthenticated user tries to access a route defined after this middleware, a user is redirected to a login page or 401 is returned if login path is not set.
 
-## Request Object Methods (`req`)
+## Request Object
 
-### authenticate(user, next) :: null
+#### req.authenticate(user, next) :: null
 
 **user:** Object, **next:** Function
 
 > Authenticates a user from the `user` object. Note that the `user` object must have an `id` key.
 
-### unauthenticate(next) :: null
+#### req.unauthenticate(next) :: null
 
 **next:** Function
 
 > Unauthenticates a user.
 
-### isAuthenticated() :: Boolean
+#### req.isAuthenticated() :: Boolean
 
 > Returns `true` if a user is authenticated.
 
-### isUnauthenticated() :: Boolean
+#### req.isUnauthenticated() :: Boolean
 
 > Returns `true` if a user is not authenticated (the reverse of the `isAuthenticated`).
 
-### getLoginUrl() :: String | Function
+#### req.getLoginUrl() :: String | Function
 
 > Returns URL path for the login page. Note that this parameter is configured through the initializer.
 
-### getBackUrl() :: String
+#### req.getBackUrl() :: String
 
 > Returns URL path to the page where a user will be redirected back after  login.
 
-### rememberAsBackUrl(url) :: null
+#### req.rememberAsBackUrl(url) :: null
 
 **url:** String
 
 > Memorizes the current URL. This method is used by the middleware when a user tries to access a page that needs authentication.
 
-### forgetBackUrl() :: null
+#### req.forgetBackUrl() :: null
 
 > Forgets the redirect-back URL.
 
-## Respond Object Methods (`res`)
+## Respond Object
 
-### redirectBackOr(url) :: null
+#### res.redirectBackOr(url) :: null
 
 **url:** String
 
