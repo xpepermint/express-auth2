@@ -1,6 +1,6 @@
 {
-  "name": "express-auth",
-  "version": "0.0.1",
+  "name": "express-auth2",
+  "version": "0.0.2",
   "description": "User authentication middleware for ExpressJS.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:xpepermint/express-auth.git"
+    "url": "git@github.com:xpepermint/express-auth2.git"
   },
   "keywords": [
     "auth",
@@ -23,7 +23,7 @@
   "author": "Xpepermint",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xpepermint/express-auth/issues"
+    "url": "https://github.com/xpepermint/express-auth2/issues"
   },
-  "homepage": "https://github.com/xpepermint/express-auth"
+  "homepage": "https://github.com/xpepermint/express-auth2"
 }
